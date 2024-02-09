@@ -26,7 +26,6 @@ export const register = async (values: z.infer<typeof RegisterSchema>) => {
   await db.user.create({
     data: {
       name,
-      email,
       password: hashedPassword,
     },
   });
