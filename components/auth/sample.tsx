@@ -7,9 +7,8 @@ import { useState, useTransition } from "react";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 
-import { Input } from "@/components/ui/input";
 import { RegisterSchema } from "@/schemas";
-
+import { Input } from "@/components/ui/input";
 import {
   Form,
   FormControl,
@@ -18,7 +17,6 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-
 import { CardWrapper } from "@/components/auth/card-wrapper";
 import { Button } from "@/components/ui/button";
 import { FormError } from "@/components/form-error";
@@ -39,7 +37,7 @@ export const RegisterForm = () => {
     },
   });
 
-  const onSubmitFunction = (values: z.infer<typeof RegisterSchema>) => {
+  const onSubmit = (values: z.infer<typeof RegisterSchema>) => {
     setError("");
     setSuccess("");
 
@@ -53,17 +51,14 @@ export const RegisterForm = () => {
 
   return (
     <CardWrapper
-      headerLabel="Welcome! Please create an account."
+      headerLabel="Create an account"
       formType="Register"
       backButtonLabel="Already have an account?"
       backButtonHref="/auth/login"
       showSocial
     >
       <Form {...form}>
-        <form
-          onSubmit={form.handleSubmit(onSubmitFunction)}
-          className="space-y-6"
-        >
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <div className="space-y-4">
             <FormField
               control={form.control}
@@ -82,7 +77,6 @@ export const RegisterForm = () => {
                 </FormItem>
               )}
             />
-
             <FormField
               control={form.control}
               name="email"
@@ -101,7 +95,6 @@ export const RegisterForm = () => {
                 </FormItem>
               )}
             />
-
             <FormField
               control={form.control}
               name="password"
@@ -123,7 +116,7 @@ export const RegisterForm = () => {
           </div>
           <FormError message={error} />
           <FormSuccess message={success} />
-          <Button type="submit" className="w-full" disabled={isPending}>
+          <Button disabled={isPending} type="submit" className="w-full">
             Create an account
           </Button>
         </form>
