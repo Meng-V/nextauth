@@ -1,10 +1,10 @@
 /**
-An array of routes that are accessible to the public
+An array of routes that are accessible to the public users
 These routes do not require authentication
 @type {string[]}
  */
 
-export const publicRoutes = ["/"];
+export const publicRoutes = ["/"]; // Landing page that allows all users to access
 
 /**
 An array of routes that are used for authentication
@@ -22,7 +22,7 @@ authentication purposes
 export const apiAuthPrefix = "/api/auth";
 
 /**
-The default redirect path after logged in
+The default redirect path after logging in
 @type {string}
  */
 export const DEFAULT_LOGIN_REDIRECT = "/settings";
