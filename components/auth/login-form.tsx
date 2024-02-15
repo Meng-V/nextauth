@@ -44,10 +44,10 @@ export const LoginForm = () => {
 
     startTransition(() => {
       login(values).then((data) => {
-        // if (data) {
+        if (data) {
           setError(data.error);
           setSuccess(success);
-        // }
+        }
       });
     });
   };
