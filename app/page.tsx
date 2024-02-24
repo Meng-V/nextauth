@@ -20,9 +20,9 @@ export default function Home() {
             font.className
           )}
         >
-          🔐 Auth
+          🔐 小黄条
         </h1>
-        <p className="text-white text-lg">A simple authentication service</p>
+        <p className="text-white text-lg">记录你的每一条秘密</p>
         <div>
           <LoginButton>
             <Button variant="secondary" size="lg">
