@@ -14,7 +14,7 @@ interface HeaderProps {
 export const Header = ({ label, formType }: HeaderProps) => {
   return (
     <div className="w-full flex flex-col gap-y-4 items-center justify-center">
-      <h1 className={cn("text-3xl font-semibold", font.className)}>🔐 小黄条</h1>
+      <h1 className={cn("text-3xl font-semibold", font.className)}>🔐 Your Sticky Notes</h1>
       <h2 className="rounded-md border-t-4 border-b-4 px-5 border-sky-300 text-muted-foreground font-semibold">{formType}</h2>
       <p className="text-muted-foreground text-sm">{label}</p>
     </div>

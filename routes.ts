@@ -4,7 +4,10 @@ These routes do not require authentication
 @type {string[]}
  */
 
-export const publicRoutes = ["/"]; // Landing page that allows all users to access
+export const publicRoutes = [
+    "/",
+    "/auth/new-verification"
+]; // Landing page that allows all users to access
 
 /**
 An array of routes that are used for authentication

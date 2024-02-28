@@ -20,9 +20,9 @@ export default function Home() {
             font.className
           )}
         >
-          🔐 小黄条
+          🔐 Your Sticky Notes
         </h1>
-        <p className="text-white text-lg">记录你的每一条秘密</p>
+        <p className="text-white text-lg">Let me keep it for you ❤️</p>
         <div>
           <LoginButton>
             <Button variant="secondary" size="lg">

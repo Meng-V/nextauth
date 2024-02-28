@@ -26,6 +26,9 @@ export const {
   },
   callbacks: {
     async signIn({ user, account }) {
+      console.log({
+        user,
+      })
       // Allow OAuth without email verification
       if (account?.provider !== "credentials") return true;
 
@@ -40,9 +43,9 @@ export const {
       return true;
     },
     async session({ token, session }) {
-      console.log({
-        sessionToken: token,
-      });
+      // console.log({
+      //   sessionToken: token,
+      // });
       if (token.sub && session.user) {
         session.user.id = token.sub;
       }
